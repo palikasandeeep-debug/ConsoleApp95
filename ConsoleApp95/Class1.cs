@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp95
 {
-    //internal class Class1
-    //{
-    //    myclass obj=new myclass();
-    //    internal void dis()
-    //    {
-    //        obj.name = "sandy";
-    //        Console.WriteLine("name:"+obj.name);
-    //    }
-        
-    //}
+    internal class Class1
+    {
+        //myclass obj = new myclass();
+        //internal void dis()
+        //{
+        //    obj.name = "sandy";
+        //    Console.WriteLine("name:" + obj.name);
+        //}
+
+    }
 }

@@ -10,46 +10,66 @@ using employee;
 
 namespace empdiplay
 {
-    public class diplayemp1
+    public class protectedd:protectde
     {
-        emp obj = new emp();
-
-        public void displayemp()
+      
+     
+        public void displayp()
         {
-
-            Console.WriteLine("emp id is:" + obj.eId);
-            Console.WriteLine("emp name is:" + obj.eName);
-            Console.WriteLine("emp sal is:" + obj.esal);
-
+            Console.WriteLine("proted " +a);
         }
+
     }
-    public class st
-    {
-        public int sid = 111;
-        public void displayemp2()
-        {
-            Console.WriteLine("sid is" + sid);
-        }
-    }
-    public class st2 
-    {
-        protected internal int id = 2000;
-        public void display()
-        {
-            Console.WriteLine("st2 id is" + id);
 
-        }
+
+
+
+
+
+
+
+
+
+    //public class diplayemp1
+    //{
+    //    emp obj = new emp();
+
+    //    public void displayemp()
+    //    {
+
+    //        Console.WriteLine("emp id is:" + obj.eId);
+    //        Console.WriteLine("emp name is:" + obj.eName);
+    //        Console.WriteLine("emp sal is:" + obj.esal);
+
+    //    }
+    //}
+    //public class st
+    //{
+    //    public int sid = 111;
+    //    public void displayemp2()
+    //    {
+    //        Console.WriteLine("sid is" + sid);
+    //    }
+    //}
+    //public class st2 
+    //{
+    //    protected internal int id = 2000;
+    //    public void display()
+    //    {
+    //        Console.WriteLine("st2 id is" + id);
+
+    //    }
       
 
-    }
-     public class st4
-    {
-        protected int pid = 123;
-        public void displayst4()
-        {
-            Console.WriteLine("pro 1"+pid);
+    //}
+    // public class st4
+    //{
+    //    protected int pid = 123;
+    //    public void displayst4()
+    //    {
+    //        Console.WriteLine("pro 1"+pid);
 
-        }
+    //    }
 
-    }
+    //}
 }

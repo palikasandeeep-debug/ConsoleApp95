@@ -18,4 +18,18 @@ namespace ClassLibrary1
            
     //    }
     //}
+
+
+      public class pro
+    {
+        protected int b = 20;
+    }
+    public class pro2:pro
+    {
+        public void diplaycurentclass()
+        {
+            Console.WriteLine(" curent class member" + b);
+        }
+    }
+
 }

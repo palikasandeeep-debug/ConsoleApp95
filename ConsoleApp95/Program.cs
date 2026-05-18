@@ -4,46 +4,64 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using empdiplay;
+using ClassLibrary2;
 
 
 namespace ConsoleApp95
 {
 
-    class contractureoverload
+  public class protectd:testingprotected
     {
-
-        int sid;
-        string name;
-        int age;
-        public contractureoverload()
+        public void displaypro()
         {
-            sid = 123;
-            name = "sandy";
-            //age = 20;
-
-        }
-        public contractureoverload(int Sid)
-        {
-            sid = Sid;
-            name = "not provide";
-           
-        
-        }
-        public contractureoverload(int Sid,string Name)
-        {
-            sid=Sid;
-            name = Name;
-
-        }
-        public void display()
-        {
-            Console.WriteLine("sid is:" + sid);
-            Console.WriteLine("sname:"+name);
-            Console.WriteLine("age is"+age);
+            Console.WriteLine("protected testing" + c);
         }
 
     }
+    
+    //constractor over loading
+    //class contractureoverload
+    //{
+
+    //    int sid;
+    //    string name;
+    //    int age;
+    //    public contractureoverload()
+    //    {
+    //        sid = 123;
+    //        name = "sandy";
+    //        //age = 20;
+
+    //    }
+    //    public contractureoverload(int Sid)
+    //    {
+    //        sid = Sid;
+    //        name = "not provide";
+           
+        
+    //    }
+    //    public contractureoverload(string Name)
+    //    {
+    //        name = Name;
+        
+
+    //    }
+    //    public contractureoverload(int Sid,string Name)
+    //    {
+    //        sid=Sid;
+    //        name = Name;
+
+    //    }
+      
+    //    public void display()
+    //    {
+    //        Console.WriteLine("sid is:" + sid);
+    //        Console.WriteLine("sname:"+name);
+    //        Console.WriteLine("age is"+age);
+            
+    //    }
+
+    //}
 
 
 
@@ -152,34 +170,37 @@ namespace ConsoleApp95
     {
         static void Main(string[] args)
         {
-            contractureoverload constr=new contractureoverload();
-            constr.display();
-            Console.WriteLine("===========================");
-            contractureoverload obj=new contractureoverload(122);
-            obj.display();
-            Console.WriteLine("===========================");
-            contractureoverload obj2 = new contractureoverload(123,"rama");
-            obj2.display();
+            //contractureoverload constr=new contractureoverload();
+            //constr.display();
+            //Console.WriteLine("===========================");
+            //contractureoverload obj=new contractureoverload(122);
+            //obj.display();
+            //Console.WriteLine("===========================");
+            //contractureoverload obj2 = new contractureoverload(123,"rama");
+            //obj2.display();
+            //Console.WriteLine("===========================");
+            //contractureoverload obj3 = new contractureoverload( "rama2");
+            //obj3.display();
 
 
-          
+
 
             //protected internal:
 
-          //diplayemp1 obj = new diplayemp1();
-          //  obj.displayemp();
+            //diplayemp1 obj = new diplayemp1();
+            //  obj.displayemp();
 
-          //  st ob=new st();
-          //  ob.displayemp2();
-          //  st2 ob2=new st2();
-          //  ob2.display ();
-          //  st3 dis=new st3();
-          //  dis.st3disply();
-          //  st4 st4=new st4();
-          //  st4.displayst4();
-          //  st5 st5= new st5();
-          //  st5.st5disply();
-            
+            //  st ob=new st();
+            //  ob.displayemp2();
+            //  st2 ob2=new st2();
+            //  ob2.display ();
+            //  st3 dis=new st3();
+            //  dis.st3disply();
+            //  st4 st4=new st4();
+            //  st4.displayst4();
+            //  st5 st5= new st5();
+            //  st5.st5disply();
+
             //========================
 
 
@@ -196,7 +217,7 @@ namespace ConsoleApp95
             //Console.WriteLine("===================Student example==============");
             //Console.WriteLine("enter student id");
             //int id=int.Parse(Console.ReadLine());
-          
+
             //Console.WriteLine("enter student name :");
             //string name=Console.ReadLine();
             //Console.WriteLine("enter student age");
@@ -214,7 +235,7 @@ namespace ConsoleApp95
             //}
             //student s = new student(id, name, age);
             //s.displaystudent();
-            
+
 
 
         }
