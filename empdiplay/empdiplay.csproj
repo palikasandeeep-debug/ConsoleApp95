@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8F6EE34B-31E0-45AF-AF6C-81176F94EAFB}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp95</RootNamespace>
-    <AssemblyName>ConsoleApp95</AssemblyName>
+    <ProjectGuid>{22DB6643-5E85-4F74-9BA3-9CA0DDA1C4AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>empdiplay</RootNamespace>
+    <AssemblyName>empdiplay</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,18 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="diplayemp1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\empdiplay\empdiplay.csproj">
-      <Project>{22db6643-5e85-4f74-9ba3-9ca0dda1c4ad}</Project>
-      <Name>empdiplay</Name>
-    </ProjectReference>
     <ProjectReference Include="..\employee\employee.csproj">
       <Project>{21d791d6-fdb7-4c28-ac96-32bbeae59892}</Project>
       <Name>employee</Name>
