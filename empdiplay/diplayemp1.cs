@@ -30,6 +30,7 @@ namespace empdiplay
 
 
 
+
     //public class diplayemp1
     //{
     //    emp obj = new emp();

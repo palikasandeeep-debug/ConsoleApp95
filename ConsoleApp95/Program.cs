@@ -10,14 +10,17 @@ using ClassLibrary2;
 namespace ConsoleApp95
 {
 
-  public class protectd:testingprotected
+  public class protectd
     {
         public void displaypro()
+
         {
-            Console.WriteLine("protected testing" + c);
+            testingprotected t=new testingprotected();
+            Console.WriteLine("protected testing" +t. c);
         }
 
     }
+
     
     //constractor over loading
     //class contractureoverload

@@ -8,7 +8,15 @@ namespace ClassLibrary2
 {
     public class testingprotected
     {
-        protected int c = 10;
+        protected internal  int c = 10;
+    }
+    public class test2
+    {
+        testingprotected t=new testingprotected();
+        public void display()
+        {
+            Console.WriteLine("display" +t. c);
+        }
     }
 
 }

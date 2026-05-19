@@ -19,7 +19,7 @@ namespace employee
     {
      protected int a = 10;
     }
-    public class protectedfromclass1:
+    public class protectedfromclass1: protectde
     { 
     
 
