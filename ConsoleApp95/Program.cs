@@ -9,19 +9,44 @@ using ClassLibrary2;
 
 namespace ConsoleApp95
 {
-
-  public class protectd
+    class student
     {
-        public void displaypro()
+        int sid;
+        string name;
 
+        public student(int sid, string name)
         {
-            testingprotected t=new testingprotected();
-            Console.WriteLine("protected testing" +t. c);
+            this.sid = sid;
+            this.name = name;
         }
-
+        public void display()
+        {
+            Console.WriteLine("Student id is:" + sid);
+            Console.WriteLine("Student name is:" + name);
+        }
     }
 
-    
+
+
+
+
+
+
+
+
+
+    //public class protectd
+    //  {
+    //      public void displaypro()
+
+    //      {
+    //          testingprotected t=new testingprotected();
+    //          Console.WriteLine("protected testing" +t. c);
+    //      }
+
+    //  }
+
+
     //constractor over loading
     //class contractureoverload
     //{
@@ -40,13 +65,13 @@ namespace ConsoleApp95
     //    {
     //        sid = Sid;
     //        name = "not provide";
-           
-        
+
+
     //    }
     //    public contractureoverload(string Name)
     //    {
     //        name = Name;
-        
+
 
     //    }
     //    public contractureoverload(int Sid,string Name)
@@ -55,13 +80,13 @@ namespace ConsoleApp95
     //        name = Name;
 
     //    }
-      
+
     //    public void display()
     //    {
     //        Console.WriteLine("sid is:" + sid);
     //        Console.WriteLine("sname:"+name);
     //        Console.WriteLine("age is"+age);
-            
+
     //    }
 
     //}
@@ -92,8 +117,8 @@ namespace ConsoleApp95
 
     // public class conncetionstring
     //{
-       
-       
+
+
     //    string connectiondb;
     //    SqlConnection conn;
     //    public conncetionstring(string connectiondb)
@@ -124,16 +149,16 @@ namespace ConsoleApp95
 
     //}
 
-   //internal class myclass
-   // {
-   //     protected internal string name;
-   //     public void print()
-   //     {
-   //         name = "sandeep";
-   //         Console.WriteLine(name);
-   //     }
+    //internal class myclass
+    // {
+    //     protected internal string name;
+    //     public void print()
+    //     {
+    //         name = "sandeep";
+    //         Console.WriteLine(name);
+    //     }
 
-   // }
+    // }
 
 
     //class student
@@ -150,8 +175,8 @@ namespace ConsoleApp95
     //        this.age = age;
 
     //         //}
-            
-            
+
+
     //    }
     //    public void displaystudent()
     //    {
@@ -173,6 +198,36 @@ namespace ConsoleApp95
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("how many students details U want enter");
+            int n = int.Parse(Console.ReadLine());
+            student[] st = new student[n];
+            Console.WriteLine("enter student details");
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("enter student id");
+                int id = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Student Name");
+                string name = Console.ReadLine();
+                st[i] = new student(id, name);
+            }
+
+            Console.WriteLine("Student Details are");
+            for (int i = 0; i < st.Length; i++)
+            {
+                st[i].display();
+            }
+
+
+
+
+
+
+
+
+
+
+
+
             //contractureoverload constr=new contractureoverload();
             //constr.display();
             //Console.WriteLine("===========================");

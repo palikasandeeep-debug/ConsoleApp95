@@ -15,20 +15,20 @@ namespace employee
 
     //}
 
-    public class protectde
-    {
-     protected int a = 10;
-    }
-    public class protectedfromclass1: protectde
-    { 
+    //public class protectde
+    //{
+    // protected int a = 10;
+    //}
+    //public class protectedfromclass1: protectde
+    //{ 
     
 
-        public void display()
-        {
-            Console.WriteLine("dipaly class1 propertys" + b);
-        }
+    //    public void display()
+    //    {
+    //        Console.WriteLine("dipaly class1 propertys" + b);
+    //    }
     
-    }
+    //}
 
 
 }
