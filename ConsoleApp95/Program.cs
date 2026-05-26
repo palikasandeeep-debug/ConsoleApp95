@@ -9,22 +9,121 @@ using ClassLibrary2;
 
 namespace ConsoleApp95
 {
+
+
     class student
     {
         int sid;
-        string name;
+        string Sname;
+        static string collegename;
 
-        public student(int sid, string name)
+        public student(int Sid, string sname)
         {
-            this.sid = sid;
-            this.name = name;
+            sid = Sid;
+            Sname = sname;
         }
+        static student()
+        {
+            collegename = "cdc";
+
+        }
+
         public void display()
         {
-            Console.WriteLine("Student id is:" + sid);
-            Console.WriteLine("Student name is:" + name);
+            Console.WriteLine("student id is: " + sid);
+            Console.WriteLine("student name is: " + Sname);
+        }
+        public static void collegedisplay()
+        {
+
+            Console.WriteLine("college name is: " + collegename);
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    // copy constractor:
+    //class student
+    //{
+
+    //    public int Sid;
+    //    public string Sname;
+
+    //    public student(int sid, string sname)
+    //    {
+    //        Sid = sid;
+    //        Sname = sname;
+    //    }
+    //    public student(student st)
+    //    {
+    //        Sid = st.Sid;
+    //        Sname = st.Sname;
+    //    }
+    //    public void StudentDisplay()
+    //    {
+
+    //        Console.WriteLine("student id is:  " + Sid);
+    //        Console.WriteLine("Student Name is:  " + Sname);
+    //    }
+    //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //class student
+    //{
+    //    int sid;
+    //    string name;
+
+    //    public student(int sid, string name)
+    //    {
+    //        this.sid = sid;
+    //        this.name = name;
+    //    }
+    //    public void display()
+    //    {
+    //        Console.WriteLine("Student id is:" + sid);
+    //        Console.WriteLine("Student name is:" + name);
+    //    }
+    //}
 
 
 
@@ -198,24 +297,67 @@ namespace ConsoleApp95
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("how many students details U want enter");
-            int n = int.Parse(Console.ReadLine());
-            student[] st = new student[n];
-            Console.WriteLine("enter student details");
-            for (int i = 0; i < n; i++)
-            {
-                Console.WriteLine("enter student id");
-                int id = int.Parse(Console.ReadLine());
-                Console.WriteLine("Enter Student Name");
-                string name = Console.ReadLine();
-                st[i] = new student(id, name);
-            }
 
-            Console.WriteLine("Student Details are");
-            for (int i = 0; i < st.Length; i++)
-            {
-                st[i].display();
-            }
+            student s1 = new student(1, "rama");
+            s1.display();
+            student s2 = new student(2, "ravi");
+            s2.display();
+            student.collegedisplay();
+
+
+
+
+
+
+
+
+            //copy constructor
+            //student obj = new student(1, "sandy");
+            //obj.StudentDisplay();
+            //student sobj = new student(obj);
+            //sobj.StudentDisplay();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //Console.WriteLine("how many students details U want enter");
+            //int n = int.Parse(Console.ReadLine());
+            //student[] st = new student[n];
+            //Console.WriteLine("enter student details");
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.WriteLine("enter student id");
+            //    int id = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("Enter Student Name");
+            //    string name = Console.ReadLine();
+            //    st[i] = new student(id, name);
+            //}
+
+            //Console.WriteLine("Student Details are");
+            //for (int i = 0; i < st.Length; i++)
+            //{
+            //    st[i].display();
+            //}
 
 
 
