@@ -21,7 +21,7 @@ namespace ConsoleApp95
     class account
     {
         private double balance;
-        private int pin = 123;
+        private string pin = "anil123";
         public void Deposit(double amount)
         {
             if (amount > 0)
@@ -33,11 +33,11 @@ namespace ConsoleApp95
         public void withdraw(double amount)
         {
             Console.WriteLine(" enter pin ");
-            int enterpin =int.Parse(Console.ReadLine());
+            string enterpin =Console.ReadLine();
             if (enterpin !=pin)
             {
                 Console.WriteLine(" in valid pin");
-                return;
+               return;
 
             }
             else if (amount <= balance)
