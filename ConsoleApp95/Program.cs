@@ -43,7 +43,8 @@ namespace ConsoleApp95
             else if (amount <= balance)
             {
                 balance -= amount;
-                Console.WriteLine("withdraw amount: " + balance);
+
+                Console.WriteLine("withdraw amount: " + amount);
             }
 
         }
