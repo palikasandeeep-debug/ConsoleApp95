@@ -11,434 +11,565 @@ namespace ConsoleApp95
 {
 
 
-    class student
+    //OOps Princeples
+
+
+    //encapuslation
+
+
+
+    class account
     {
-        int sid;
-        string Sname;
-        static string collegename;
-
-        public student(int Sid, string sname)
+        private double balance;
+        private int pin = 123;
+        public void Deposit(double amount)
         {
-            sid = Sid;
-            Sname = sname;
+            if (amount > 0)
+            {
+                balance += amount;
+            }
+            Console.WriteLine("deposit amount: "+balance);
         }
-        static student()
+        public void withdraw(double amount)
         {
-            collegename = "cdc";
+            Console.WriteLine(" enter pin ");
+            int enterpin =int.Parse(Console.ReadLine());
+            if (enterpin !=pin)
+            {
+                Console.WriteLine(" in valid pin");
+                return;
+
+            }
+            else if (amount <= balance)
+            {
+                balance -= amount;
+                Console.WriteLine("withdraw amount: " + balance);
+            }
 
         }
-
-        public void display()
+        public double getbalance()
         {
-            Console.WriteLine("student id is: " + sid);
-            Console.WriteLine("student name is: " + Sname);
+            return balance;
         }
-        public static void collegedisplay()
-        {
 
-            Console.WriteLine("college name is: " + collegename);
+    }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //class employee
+        //{
+        //    int id;
+        //    string name;
+        //    double sal;
+        //    static string companyname;
+        //    public employee(int eid, string ename, double esal)
+        //    {
+        //        id = eid;
+        //        name = ename;
+        //        sal = esal;
+        //    }
+        //    static employee()
+        //    {
+        //        companyname = "wipro";
+        //    }
+        //    public void displayempdetais()
+        //    {
+        //        Console.WriteLine("emp id is:  " + id);
+        //        Console.WriteLine("emp name is : " + name);
+        //        Console.WriteLine("emp sal is : " + sal);
+        //    }
+        //    public static void company()
+        //    {
+        //        Console.WriteLine("company name is : " + companyname);
+        //    }
+        //    public void  hikesal()
+        //    {
+        //        double hikesal = sal * 10 / 100;
+        //        Console.WriteLine("hikesal is: "+hikesal);
+        //          }
+
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //class student
+        //{
+        //    int sid;
+        //    string Sname;
+        //    static string collegename;
+
+        //    public student(int Sid, string sname)
+        //    {
+        //        sid = Sid;
+        //        Sname = sname;
+        //    }
+        //    static student()
+        //    {
+        //        collegename = "cdc";
+
+        //    }
+
+        //    public void display()
+        //    {
+        //        Console.WriteLine("student id is: " + sid);
+        //        Console.WriteLine("student name is: " + Sname);
+        //    }
+        //    public static void collegedisplay()
+        //    {
+
+        //        Console.WriteLine("college name is: " + collegename);
+        //    }
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+        // copy constractor:
+        //class student
+        //{
+
+        //    public int Sid;
+        //    public string Sname;
+
+        //    public student(int sid, string sname)
+        //    {
+        //        Sid = sid;
+        //        Sname = sname;
+        //    }
+        //    public student(student st)
+        //    {
+        //        Sid = st.Sid;
+        //        Sname = st.Sname;
+        //    }
+        //    public void StudentDisplay()
+        //    {
+
+        //        Console.WriteLine("student id is:  " + Sid);
+        //        Console.WriteLine("Student Name is:  " + Sname);
+        //    }
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //class student
+        //{
+        //    int sid;
+        //    string name;
+
+        //    public student(int sid, string name)
+        //    {
+        //        this.sid = sid;
+        //        this.name = name;
+        //    }
+        //    public void display()
+        //    {
+        //        Console.WriteLine("Student id is:" + sid);
+        //        Console.WriteLine("Student name is:" + name);
+        //    }
+        //}
+
+
+
+
+
+
+
+
+
+
+        //public class protectd
+        //  {
+        //      public void displaypro()
+
+        //      {
+        //          testingprotected t=new testingprotected();
+        //          Console.WriteLine("protected testing" +t. c);
+        //      }
+
+        //  }
+
+
+        //constractor over loading
+        //class contractureoverload
+        //{
+
+        //    int sid;
+        //    string name;
+        //    int age;
+        //    public contractureoverload()
+        //    {
+        //        sid = 123;
+        //        name = "sandy";
+        //        //age = 20;
+
+        //    }
+        //    public contractureoverload(int Sid)
+        //    {
+        //        sid = Sid;
+        //        name = "not provide";
+
+
+        //    }
+        //    public contractureoverload(string Name)
+        //    {
+        //        name = Name;
+
+
+        //    }
+        //    public contractureoverload(int Sid,string Name)
+        //    {
+        //        sid=Sid;
+        //        name = Name;
+
+        //    }
+
+        //    public void display()
+        //    {
+        //        Console.WriteLine("sid is:" + sid);
+        //        Console.WriteLine("sname:"+name);
+        //        Console.WriteLine("age is"+age);
+
+        //    }
+
+        //}
+
+
+
+
+
+
+        //class st3:st2
+        //{
+        //    public void st3disply()
+        //    {
+        //        Console.WriteLine("st3"+id);
+        //    }
+        //}
+        //class st5 : st4
+        //{
+        //    public void st5disply()
+        //    {
+        //        Console.WriteLine("st5" + pid);
+        //    }
+        //}
+
+
+
+
+
+        // public class conncetionstring
+        //{
+
+
+        //    string connectiondb;
+        //    SqlConnection conn;
+        //    public conncetionstring(string connectiondb)
+        //    {
+        //        this.connectiondb = connectiondb;
+        //        conn = new SqlConnection(connectiondb);
+        //    }
+        //    public void openconncetion()
+        //    {
+        //        try
+        //        {
+        //            conn.Open();
+        //            Console.WriteLine("connection open suceessfuly");
+        //        }
+        //        catch(Exception ex)
+        //        {
+        //            Console.WriteLine(ex.Message);
+        //        }
+        //    }
+        //    public void closeconncetion()
+        //    {
+        //        if(conn.State==System.Data.ConnectionState.Open)
+        //        {
+        //            conn.Close();
+        //            Console.WriteLine("conncetion closed succeessfuly");
+        //        }
+        //    }
+
+        //}
+
+        //internal class myclass
+        // {
+        //     protected internal string name;
+        //     public void print()
+        //     {
+        //         name = "sandeep";
+        //         Console.WriteLine(name);
+        //     }
+
+        // }
+
+
+        //class student
+        //{
+        //    int id;
+        //    string name;
+        //    int age;
+        //    public student(int id, string name, int age)
+        //    {
+        //        this.id = id;
+        //        this.name = name;
+        //        //if (age >= 18 && age <= 60)
+        //        //{
+        //        this.age = age;
+
+        //         //}
+
+
+        //    }
+        //    public void displaystudent()
+        //    {
+        //        Console.WriteLine("student is is:"+this.id);
+        //        Console.WriteLine("student name is:" + this.name);
+        //        if (this.age >=18 && this.age <= 60)
+        //        {
+
+        //            Console.WriteLine("student age is:" + age);
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("invalid age");
+        //        }
+
+        //    }
+        //}
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                account ac = new account();
+                ac.Deposit(5000);
+                ac.withdraw(2000);
+            Console.WriteLine("balance amount: " + ac.getbalance());
+          
+
+
+
+
+                //employee e = new employee(1, "rama", 1000);
+
+                //   e.displayempdetais();
+                //employee.company();
+                //e.hikesal();    
+
+
+
+
+
+
+
+
+
+                //student s1 = new student(1, "rama");
+                //s1.display();
+                //student s2 = new student(2, "ravi");
+                //s2.display();
+                //student.collegedisplay();
+
+
+
+
+
+
+
+
+                //copy constructor
+                //student obj = new student(1, "sandy");
+                //obj.StudentDisplay();
+                //student sobj = new student(obj);
+                //sobj.StudentDisplay();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                //Console.WriteLine("how many students details U want enter");
+                //int n = int.Parse(Console.ReadLine());
+                //student[] st = new student[n];
+                //Console.WriteLine("enter student details");
+                //for (int i = 0; i < n; i++)
+                //{
+                //    Console.WriteLine("enter student id");
+                //    int id = int.Parse(Console.ReadLine());
+                //    Console.WriteLine("Enter Student Name");
+                //    string name = Console.ReadLine();
+                //    st[i] = new student(id, name);
+                //}
+
+                //Console.WriteLine("Student Details are");
+                //for (int i = 0; i < st.Length; i++)
+                //{
+                //    st[i].display();
+                //}
+
+
+
+
+
+
+
+
+
+
+
+
+                //contractureoverload constr=new contractureoverload();
+                //constr.display();
+                //Console.WriteLine("===========================");
+                //contractureoverload obj=new contractureoverload(122);
+                //obj.display();
+                //Console.WriteLine("===========================");
+                //contractureoverload obj2 = new contractureoverload(123,"rama");
+                //obj2.display();
+                //Console.WriteLine("===========================");
+                //contractureoverload obj3 = new contractureoverload( "rama2");
+                //obj3.display();
+
+
+
+
+                //protected internal:
+
+                //diplayemp1 obj = new diplayemp1();
+                //  obj.displayemp();
+
+                //  st ob=new st();
+                //  ob.displayemp2();
+                //  st2 ob2=new st2();
+                //  ob2.display ();
+                //  st3 dis=new st3();
+                //  dis.st3disply();
+                //  st4 st4=new st4();
+                //  st4.displayst4();
+                //  st5 st5= new st5();
+                //  st5.st5disply();
+
+                //========================
+
+
+                //myclass myclass = new myclass();
+                //myclass.print();
+                //Class1 obj=new Class1();
+                //obj.dis();
+
+                //string dbconn = "Server=.;Initial Catalog=Userdatabase;Integrated Security=True;";
+                //conncetionstring db=new conncetionstring(dbconn);
+                //db.openconncetion();
+                //db.closeconncetion();
+
+                //Console.WriteLine("===================Student example==============");
+                //Console.WriteLine("enter student id");
+                //int id=int.Parse(Console.ReadLine());
+
+                //Console.WriteLine("enter student name :");
+                //string name=Console.ReadLine();
+                //Console.WriteLine("enter student age");
+                //int age = int.Parse(Console.ReadLine());
+                //int age2;
+                //while (true)
+                //{
+                //    Console.WriteLine("enter student age");
+                //   age2 = int.Parse(Console.ReadLine());
+                //    if (age2>=18&&age2<=60)
+                //    {
+                //        break;
+                //    }
+                //    Console.WriteLine("enter age between 18 to 60");
+                //}
+                //student s = new student(id, name, age);
+                //s.displaystudent();
+
+
+
+            }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-    // copy constractor:
-    //class student
-    //{
-
-    //    public int Sid;
-    //    public string Sname;
-
-    //    public student(int sid, string sname)
-    //    {
-    //        Sid = sid;
-    //        Sname = sname;
-    //    }
-    //    public student(student st)
-    //    {
-    //        Sid = st.Sid;
-    //        Sname = st.Sname;
-    //    }
-    //    public void StudentDisplay()
-    //    {
-
-    //        Console.WriteLine("student id is:  " + Sid);
-    //        Console.WriteLine("Student Name is:  " + Sname);
-    //    }
-    //}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //class student
-    //{
-    //    int sid;
-    //    string name;
-
-    //    public student(int sid, string name)
-    //    {
-    //        this.sid = sid;
-    //        this.name = name;
-    //    }
-    //    public void display()
-    //    {
-    //        Console.WriteLine("Student id is:" + sid);
-    //        Console.WriteLine("Student name is:" + name);
-    //    }
-    //}
-
-
-
-
-
-
-
-
-
-
-    //public class protectd
-    //  {
-    //      public void displaypro()
-
-    //      {
-    //          testingprotected t=new testingprotected();
-    //          Console.WriteLine("protected testing" +t. c);
-    //      }
-
-    //  }
-
-
-    //constractor over loading
-    //class contractureoverload
-    //{
-
-    //    int sid;
-    //    string name;
-    //    int age;
-    //    public contractureoverload()
-    //    {
-    //        sid = 123;
-    //        name = "sandy";
-    //        //age = 20;
-
-    //    }
-    //    public contractureoverload(int Sid)
-    //    {
-    //        sid = Sid;
-    //        name = "not provide";
-
-
-    //    }
-    //    public contractureoverload(string Name)
-    //    {
-    //        name = Name;
-
-
-    //    }
-    //    public contractureoverload(int Sid,string Name)
-    //    {
-    //        sid=Sid;
-    //        name = Name;
-
-    //    }
-
-    //    public void display()
-    //    {
-    //        Console.WriteLine("sid is:" + sid);
-    //        Console.WriteLine("sname:"+name);
-    //        Console.WriteLine("age is"+age);
-
-    //    }
-
-    //}
-
-
-
-
-
-
-    //class st3:st2
-    //{
-    //    public void st3disply()
-    //    {
-    //        Console.WriteLine("st3"+id);
-    //    }
-    //}
-    //class st5 : st4
-    //{
-    //    public void st5disply()
-    //    {
-    //        Console.WriteLine("st5" + pid);
-    //    }
-    //}
-
-
-
-
-
-    // public class conncetionstring
-    //{
-
-
-    //    string connectiondb;
-    //    SqlConnection conn;
-    //    public conncetionstring(string connectiondb)
-    //    {
-    //        this.connectiondb = connectiondb;
-    //        conn = new SqlConnection(connectiondb);
-    //    }
-    //    public void openconncetion()
-    //    {
-    //        try
-    //        {
-    //            conn.Open();
-    //            Console.WriteLine("connection open suceessfuly");
-    //        }
-    //        catch(Exception ex)
-    //        {
-    //            Console.WriteLine(ex.Message);
-    //        }
-    //    }
-    //    public void closeconncetion()
-    //    {
-    //        if(conn.State==System.Data.ConnectionState.Open)
-    //        {
-    //            conn.Close();
-    //            Console.WriteLine("conncetion closed succeessfuly");
-    //        }
-    //    }
-
-    //}
-
-    //internal class myclass
-    // {
-    //     protected internal string name;
-    //     public void print()
-    //     {
-    //         name = "sandeep";
-    //         Console.WriteLine(name);
-    //     }
-
-    // }
-
-
-    //class student
-    //{
-    //    int id;
-    //    string name;
-    //    int age;
-    //    public student(int id, string name, int age)
-    //    {
-    //        this.id = id;
-    //        this.name = name;
-    //        //if (age >= 18 && age <= 60)
-    //        //{
-    //        this.age = age;
-
-    //         //}
-
-
-    //    }
-    //    public void displaystudent()
-    //    {
-    //        Console.WriteLine("student is is:"+this.id);
-    //        Console.WriteLine("student name is:" + this.name);
-    //        if (this.age >=18 && this.age <= 60)
-    //        {
-
-    //            Console.WriteLine("student age is:" + age);
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine("invalid age");
-    //        }
-
-    //    }
-    //}
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-
-            student s1 = new student(1, "rama");
-            s1.display();
-            student s2 = new student(2, "ravi");
-            s2.display();
-            student.collegedisplay();
-
-
-
-
-
-
-
-
-            //copy constructor
-            //student obj = new student(1, "sandy");
-            //obj.StudentDisplay();
-            //student sobj = new student(obj);
-            //sobj.StudentDisplay();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //Console.WriteLine("how many students details U want enter");
-            //int n = int.Parse(Console.ReadLine());
-            //student[] st = new student[n];
-            //Console.WriteLine("enter student details");
-            //for (int i = 0; i < n; i++)
-            //{
-            //    Console.WriteLine("enter student id");
-            //    int id = int.Parse(Console.ReadLine());
-            //    Console.WriteLine("Enter Student Name");
-            //    string name = Console.ReadLine();
-            //    st[i] = new student(id, name);
-            //}
-
-            //Console.WriteLine("Student Details are");
-            //for (int i = 0; i < st.Length; i++)
-            //{
-            //    st[i].display();
-            //}
-
-
-
-
-
-
-
-
-
-
-
-
-            //contractureoverload constr=new contractureoverload();
-            //constr.display();
-            //Console.WriteLine("===========================");
-            //contractureoverload obj=new contractureoverload(122);
-            //obj.display();
-            //Console.WriteLine("===========================");
-            //contractureoverload obj2 = new contractureoverload(123,"rama");
-            //obj2.display();
-            //Console.WriteLine("===========================");
-            //contractureoverload obj3 = new contractureoverload( "rama2");
-            //obj3.display();
-
-
-
-
-            //protected internal:
-
-            //diplayemp1 obj = new diplayemp1();
-            //  obj.displayemp();
-
-            //  st ob=new st();
-            //  ob.displayemp2();
-            //  st2 ob2=new st2();
-            //  ob2.display ();
-            //  st3 dis=new st3();
-            //  dis.st3disply();
-            //  st4 st4=new st4();
-            //  st4.displayst4();
-            //  st5 st5= new st5();
-            //  st5.st5disply();
-
-            //========================
-
-
-            //myclass myclass = new myclass();
-            //myclass.print();
-            //Class1 obj=new Class1();
-            //obj.dis();
-
-            //string dbconn = "Server=.;Initial Catalog=Userdatabase;Integrated Security=True;";
-            //conncetionstring db=new conncetionstring(dbconn);
-            //db.openconncetion();
-            //db.closeconncetion();
-
-            //Console.WriteLine("===================Student example==============");
-            //Console.WriteLine("enter student id");
-            //int id=int.Parse(Console.ReadLine());
-
-            //Console.WriteLine("enter student name :");
-            //string name=Console.ReadLine();
-            //Console.WriteLine("enter student age");
-            //int age = int.Parse(Console.ReadLine());
-            //int age2;
-            //while (true)
-            //{
-            //    Console.WriteLine("enter student age");
-            //   age2 = int.Parse(Console.ReadLine());
-            //    if (age2>=18&&age2<=60)
-            //    {
-            //        break;
-            //    }
-            //    Console.WriteLine("enter age between 18 to 60");
-            //}
-            //student s = new student(id, name, age);
-            //s.displaystudent();
-
-
-
-        }
-    }
- }
 
