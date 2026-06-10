@@ -8,6 +8,14 @@ using ConsoleApp95;
 
 namespace ClassLibrary1
 {
+
+
+
+
+
+
+
+
     //public class Class1 : myclass
     //{
     //   public void display()
